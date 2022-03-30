@@ -1,0 +1,16 @@
+body{
+    text-align:center;
+    background-image:url(https://imgur.dcard.tw/X3zhiwlh.jpg);
+    background-repeat: repeat;
+}
+h1 p li{
+    color:black;
+}
+@media (min-width:768px)
+{
+    image{
+        max-width:500px;
+        width:10%;
+        height:10%;
+    }
+}
