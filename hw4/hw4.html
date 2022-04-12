@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    var out1 = "";
+    var out2 = "";
+    var out3 = "";
+    var out4 = "";
+    var out5 = "";
+    var out6 = "";
+    var c1 = 0, c2 = 1, c3 = 1;
+    var c4 = 0, c5 = 1, c6 = 1;
+    var c7 = 0, c8 = 1, c9 = 1;
+    var c10 = 0, c11 = 1, c12 = 1;
+    var c13 = 0, c14 = 1, c15 = 1;
+    var c16 = 0, c17 = 1, c18 = 1;
+
+    $(document).ready(function () {
+        $("#button").click(function () {
+            setInterval(print, 1500);
+            setInterval(print1, 1500);
+            setInterval(print2, 1500);
+            setInterval(print3, 1500);
+            setInterval(print4, 1500);
+            setInterval(print5, 1500);
+        });
+    });
+
+    $(document).deleteChr(function () {
+        $("*").keydown(function (e) {
+            if (e.key == out1.substr(-1)) {
+                $("#pic" + c3).stop();
+                $("#pic" + c3).remove();
+                c3++;
+                out1 = out1.substr(0, out1.length - 1)
+            }
+        });
+    });
+
+    $(document).deleteChr1(function () {
+        $("*").keydown(function (e) {
+            if (e.key == out2.substr(-1)) {
+                $("#pic1" + c6).stop();
+                $("#pic1" + c6).remove();
+                c6++;
+                out2 = out2.substr(0, out2.length - 1)
+            }
+        });
+    });
+
+    $(document).deleteChr2(function () {
+        $("*").keydown(function (e) {
+            if (e.key == out3.substr(-1)) {
+                $("#pic2" + c9).stop();
+                $("#pic2" + c9).remove();
+                c9++;
+                out3 = out3.substr(0, out3.length - 1)
+            }
+        });
+    });
+
+    $(document).deleteChr3(function () {
+        $("*").keydown(function (e) {
+            if (e.key == out4.substr(-1)) {
+                $("#pic3" + c12).stop();
+                $("#pic3" + c12).remove();
+                c12++;
+                out4 = out4.substr(0, out4.length - 1)
+            }
+        });
+    });
+
+    $(document).deleteChr4(function () {
+        $("*").keydown(function (e) {
+            if (e.key == out5.substr(-1)) {
+                $("#pic4" + c15).stop();
+                $("#pic4" + c15).remove();
+                c15++;
+                out5 = out5.substr(0, out5.length - 1)
+            }
+        });
+    });
+
+    $(document).deleteChr5(function () {
+        $("*").keydown(function (e) {
+            if (e.key == out6.substr(-1)) {
+                $("#pic5" + c18).stop();
+                $("#pic5" + c18).remove();
+                c18++;
+                out6 = out6.substr(0, out6.length - 1)
+            }
+        });
+    });
+
+    function moveright() {
+        $("#pic" + c2).animate({ left: window.outerWidth }, 9000, 'linear', gameOver)
+        c2++;
+    }
+
+    function moveright1() {
+        $("#pic1" + c5).animate({ left: window.outerWidth }, 9000, 'linear', gameOver)
+        c5++;
+    }
+
+    function moveright2() {
+        $("#pic2" + c8).animate({ left: window.outerWidth }, 9000, 'linear', gameOver)
+        c8++;
+    }
+
+    function moveright3() {
+        $("#pic3" + c11).animate({ left: window.outerWidth }, 9000, 'linear', gameOver)
+        c11++;
+    }
+
+    function moveright4() {
+        $("#pic4" + c14).animate({ left: window.outerWidth }, 9000, 'linear', gameOver)
+        c14++;
+    }
+
+    function moveright5() {
+        $("#pic5" + c17).animate({ left: window.outerWidth }, 9000, 'linear', gameOver)
+        c17++;
+    }
+
+    function gameOver() {
+        $("*").stop();
+        $("*").empty();
+        alert("GameOver");
+    }
+
+    function print() {
+        var randNum = Math.floor(Math.random() * 26);
+        var char = String.fromCharCode(randNum + 65);
+        c1++;
+        $("#line1").prepend("<div id='pic" + c1 + "' style='position:absolute;'><img src='pic/" + char + ".jpg' width='50'></div>");
+        out1 = char + out1;
+        moveright();
+    }
+
+    function print1() {
+        var randNum = Math.floor(Math.random() * 26);
+        var char = String.fromCharCode(randNum + 65);
+        c4++;
+        $("#line2").prepend("<div id='pic1" + c4 + "' style='position:absolute;'><img src='pic/" + char + ".jpg' width='50'></div>");
+        out2 = char + out2;
+        moveright1();
+    }
+
+    function print2() {
+        var randNum = Math.floor(Math.random() * 26);
+        var char = String.fromCharCode(randNum + 65);
+        c7++;
+        $("#line3").prepend("<div id='pic2" + c7 + "' style='position:absolute;'><img src='pic/" + char + ".jpg' width='50'></div>");
+        out3 = char + out3;
+        moveright2();
+    }
+
+    function print3() {
+        var randNum = Math.floor(Math.random() * 26);
+        var char = String.fromCharCode(randNum + 65);
+        c10++;
+        $("#line4").prepend("<div id='pic3" + c10 + "' style='position:absolute;'><img src='pic/" + char + ".jpg' width='50'></div>");
+        out4 = char + out4;
+        moveright3();
+    }
+
+    function print4() {
+        var randNum = Math.floor(Math.random() * 26);
+        var char = String.fromCharCode(randNum + 65);
+        c13++;
+        $("#line5").prepend("<div id='pic4" + c13 + "' style='position:absolute;'><img src='pic/" + char + ".jpg' width='50'></div>");
+        out5 = char + out5;
+        moveright4();
+    }
+
+    function print5() {
+        var randNum = Math.floor(Math.random() * 26);
+        var char = String.fromCharCode(randNum + 65);
+        c16++;
+        $("#line6").prepend("<div id='pic5" + c16 + "' style='position:absolute;'><img src='pic/" + char + ".jpg' width='50'></div>");
+        out6 = char + out6;
+        moveright5();
+    }
+
+
+</script>
+<button id="button">start</button>
+</br>
+</br>
+</br>
+</br>
+<div id="line1" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<div id="line2" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<div id="line3" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<div id="line4" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<div id="line5" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<div id="line6" style="position:absolute;"></div>
+
+
+</html>
