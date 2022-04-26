@@ -1,0 +1,27 @@
+.head{
+    background-color: #8000ff	; 
+    color: rgb(253, 253, 253); 
+    padding: 15px; 
+    font-weight: bolder; 
+    font-size: 50px; 
+    text-align: center;
+    font-style: italic;
+}
+.station{
+    text-align: center;
+    color:#000000;
+    font-weight: bolder; 
+    font-size: 40px; 
+    padding: 10px;
+}
+#stationInform{
+    text-align: center;
+    color: #ffffff; 
+    padding-top: 15px;
+    font-weight: bolder; 
+    font-size: 30px; 
+    padding-top: 10px;
+}
+.background{
+    background-color: #be7cf1;
+}
