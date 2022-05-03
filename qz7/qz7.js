@@ -1,4 +1,4 @@
-var dataUrl = "https://wic.heo.taipei/OpenData/API/Rain/Get?stationNo=&loginId=open_rain&dataKey=85452C1D";
+var dataUrl = "https://cors-anywhere.herokuapp.com/https://wic.heo.taipei/OpenData/API/RainGetstationNo=&loginId=open_rain&dataKey=85452C1D";
 var data = $.getJSON(dataUrl);
 data.done(function(index){
     for (var i = 0; i < 170; i++)
