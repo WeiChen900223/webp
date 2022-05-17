@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+  border-style: double;
+  width: 400px;
+  height: 250px;
+  position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.login {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.input {
+  margin-bottom: 10px;
+}
+.btn {
+  margin-top: 20px;
+}
